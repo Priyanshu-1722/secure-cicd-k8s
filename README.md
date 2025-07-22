@@ -41,7 +41,7 @@ Key goals include:
 [Developer]
      |
      v
-[Source Code Repo (e.g., GitHub)]
+[Source Code Repository (e.g., GitHub)]
      |
      |--- Push Code
      v
@@ -51,18 +51,19 @@ Key goals include:
      |--- Build/Test
      |--- Image Scan
      v
-[Deploy]
+[Deploy to Kubernetes]
      |
      v
 [Kubernetes Cluster]
      ├── [Container Registry]
      |       └── Store Built Image
      |
-     ├── [Application]
+     ├── [Application Deployment]
      |       └── Pulls Image from Registry
      |
      └── [Network Policy]
              └── Enforce Security Rules
+
 
 
 ## 🔁 Flow Description
