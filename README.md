@@ -2,7 +2,7 @@
 
 ## 🧩 Project Overview
 
-`secure-cicd-k8s` is a comprehensive project that implements a **secure and automated CI/CD pipeline** using **Jenkins**, **GitHub Actions**, and **Kubernetes**. This setup ensures that containerized applications are built, scanned for vulnerabilities, and deployed in a secure manner using Kubernetes-native tools and security policies.
+`secure-cicd-k8s` is a comprehensive project that implements a **secure and automated CI/CD pipeline** using **Jenkins**, **GitHub Actions**, and **Kubernetes**. This setup ensures that containerized applications are built, scanned for vulnerabilities, and deployed securely using Kubernetes-native tools and security policies.
 
 Key goals include:
 - ✅ Automating the CI/CD lifecycle using GitHub Actions and Jenkins.
@@ -37,38 +37,6 @@ Key goals include:
 ---
 
 ## 🔄 CI/CD Flowchart
-
-[Developer]
-     |
-     v
-[Source Code Repository (e.g., GitHub)]
-     |
-     |--- Push Code
-     v
-[Jenkins (CI/CD Tool)]
-     |
-     |--- Webhook Trigger from GitHub
-     |--- Build/Test
-     |--- Image Scan
-     v
-[Deploy to Kubernetes]
-     |
-     v
-[Kubernetes Cluster]
-     ├── [Container Registry]
-     |       └── Store Built Image
-     |
-     ├── [Application Deployment]
-     |       └── Pulls Image from Registry
-     |
-     └── [Network Policy]
-             └── Enforce Security Rules
-
-Here is the **text representation** of the **"Secure CI/CD Pipeline with Kubernetes"** flowchart:
-
----
-
-### 📊 Secure CI/CD Pipeline Flow (Text Form)
 
 ```
 [Developer]
@@ -111,17 +79,6 @@ Here is the **text representation** of the **"Secure CI/CD Pipeline with Kuberne
 
 ---
 
-Let me know if you want this flow in Mermaid syntax for embedding in documentation or a GitHub Markdown file.
-
-## 🔁 Flow Description
-
-1. Developer pushes code to the Source Code Repository (like GitHub).
-2. GitHub triggers a webhook to Jenkins, starting the pipeline.
-3. Jenkins performs build, test, and image scanning (e.g., with Trivy).
-4. The final image is pushed to the container registry inside the Kubernetes cluster.
-5. Jenkins (or GitHub Actions) applies deployment manifests to deploy the application.
-6. Kubernetes applies network policies to secure communication between pods.
-
 ---
 
 ## 🛠️ Tools & Technologies
@@ -155,7 +112,7 @@ kubectl apply -f k8s-manifests/
 
 ### 4. CI/CD Automation:
 - Set GitHub secrets for Docker login and K8s access
-- Push changes to `main` branch to trigger deployment
+- Push changes to the `main` branch to trigger deployment
 
 ---
 
@@ -163,7 +120,7 @@ kubectl apply -f k8s-manifests/
 
 The **`secure-cicd-k8s`** project demonstrates a robust and security-first approach to implementing a **CI/CD pipeline for Kubernetes**. By integrating tools like **Jenkins**, **GitHub Actions**, **RBAC**, **Network Policies**, and **image scanning**, the pipeline ensures not just automation and scalability, but also compliance with modern security standards.
 
-This architecture helps eliminate manual errors, enforces policy-based deployments, and fosters a DevSecOps mindset—placing security at the core of software delivery.
+This architecture helps eliminate manual errors, enforces policy-based deployments, and fosters a DevSecOps mindset, placing security at the core of software delivery.
 
 ---
 
