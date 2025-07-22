@@ -64,7 +64,54 @@ Key goals include:
      └── [Network Policy]
              └── Enforce Security Rules
 
+Here is the **text representation** of the **"Secure CI/CD Pipeline with Kubernetes"** flowchart:
 
+---
+
+### 📊 Secure CI/CD Pipeline Flow (Text Form)
+
+```
+[Developer]
+     |
+     v
+[Source Code Repo (e.g., GitHub)]
+     |
+     |--- Push Code
+     v
+[Jenkins (CI/CD Tool)]
+     |
+     |--- Webhook Trigger from GitHub
+     |--- Build/Test
+     |--- Image Scan
+     v
+[Deploy]
+     |
+     v
+[Kubernetes Cluster]
+     ├── [Container Registry]
+     |       └── Store Built Image
+     |
+     ├── [Application]
+     |       └── Pulls Image from Registry
+     |
+     └── [Network Policy]
+             └── Enforce Security Rules
+```
+
+---
+
+### 🔁 Flow Description
+
+1. **Developer** pushes code to the **Source Code Repository** (like GitHub).
+2. GitHub triggers a webhook to **Jenkins**, starting the pipeline.
+3. Jenkins performs **build**, **test**, and **image scanning** (e.g., with Trivy).
+4. The final image is **pushed to the container registry** inside the Kubernetes cluster.
+5. Jenkins (or GitHub Actions) applies deployment manifests to deploy the **application**.
+6. Kubernetes applies **network policies** to secure communication between pods.
+
+---
+
+Let me know if you want this flow in Mermaid syntax for embedding in documentation or a GitHub Markdown file.
 
 ## 🔁 Flow Description
 
